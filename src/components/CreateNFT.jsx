@@ -9,12 +9,9 @@ import { FaTimes } from 'react-icons/fa'
 import { create } from 'ipfs-http-client'
 import { mintNFT } from '../Blockchain.Services'
 
-const auth =
-  'Basic ' +
-  Buffer.from(
-    process.env.REACT_APP_INFURIA_PID + ':' + process.env.REACT_APP_INFURIA_API,
-  ).toString('base64')
-
+const auth ='Basic ' +Buffer.from('2MGqNdsCPsdscbJ8GUhY8BQb04g' + ':' + '29969f7756f6c59608c64e4d0b51ba01').toString('base64')
+// const auth ='Basic ' +Buffer.from(process.env.REACT_APP_INFURIA_PID + ':' + process.env.REACT_APP_INFURIA_API).toString('base64')
+console.log(auth)
 const client = create({
   host: 'ipfs.infura.io',
   port: 5001,
