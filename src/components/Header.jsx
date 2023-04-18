@@ -1,17 +1,13 @@
-import timelessLogo from '../assets/timeless.png'
-import { connectWallet } from '../Blockchain.Services'
-import { useGlobalState, truncate } from '../store'
+import simform from "../assets/logo.svg";
+import { connectWallet } from "../Blockchain.Services";
+import { useGlobalState, truncate } from "../store";
 
 const Header = () => {
-  const [connectedAccount] = useGlobalState('connectedAccount')
+  const [connectedAccount] = useGlobalState("connectedAccount");
   return (
     <nav className="w-4/5 flex md:justify-center justify-between items-center py-4 mx-auto">
       <div className="md:flex-[0.5] flex-initial justify-center items-center">
-        <img
-          className="w-32 cursor-pointer"
-          src={timelessLogo}
-          alt="Timeless Logo"
-        />
+        <img className="w-32 cursor-pointer" src={simform} alt="Simform" />
       </div>
 
       <ul
@@ -44,7 +40,7 @@ const Header = () => {
         </button>
       )}
     </nav>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
